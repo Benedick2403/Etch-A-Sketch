@@ -1,0 +1,146 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    gap: 1em;
+    font-family: 'PF Tempesta Seven', sans-serif;
+    background-image: url('img/bg-img.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #dfdcdc;
+}
+
+.title{
+    text-align: center;
+    font-family: 'PF Tempesta Seven', sans-serif;
+}
+
+.title h1{
+    font-size: 4rem;
+    margin:0;
+    color: #dfdcdc;
+}
+.title p{
+    margin: 0;
+    font-size: 1.5em;
+    animation: red-green-blue 5s linear 2s infinite alternate;
+}
+
+@keyframes red-green-blue{
+    0% {color: rgb(194, 53, 53);}
+    50% {color: rgb(71, 167, 71)}
+    100% {color: rgb(24, 47, 153);}
+}
+
+.container{
+    width: 90%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    max-width: 50em;
+    height: 100%;
+    max-height: 50em;
+    user-select: none;
+    box-shadow: 1px 3px 10px pink;
+}
+
+
+.myDivs{
+    background-color: rgb(201, 124, 182);
+    box-sizing: border-box;
+    border: 1px solid white;
+    cursor: pointer;
+
+}
+
+.myDivs:hover, .myDivs.hovered{
+    background-color: black;
+}
+
+.menu-container{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.menu-container button{
+    background-color: #FFD97D;
+    border: none;
+    border-radius: .5em;
+    font-family: 'PF Tempesta Seven', sans-serif;
+    padding: 0em .5em;
+    text-align: center;
+}
+
+.menu-container #reset, #eraser{
+    width: 10em;
+    height: 3em;
+}
+
+.menu-container input{
+    width: 7em;
+    height: 2em;
+    border: none;
+    border-radius: .5em;
+}
+
+.num-container, .color-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 15em;
+    font-size: 15px;
+    gap:0em 1em;
+    color: #fffbfb;
+}
+
+.num-container button, .color-container button{
+    text-align: center;
+    width: 7em;
+    padding: 0em 2em 0em 2em;
+}
+
+@media (min-width:0px) and (max-width:500px) {
+    .title h1{
+        font-size: 2em;
+    }
+
+    .title p{
+        font-size: 1em;
+    }
+
+    .menu-container{
+        gap:.3em;
+    }
+
+    .menu-container #reset, #eraser{
+        width: 7em;
+        height: 3em;
+        font-size: 9px;
+    }
+
+    .menu-container input{
+        width: 5em;
+    }
+
+    .num-container, .color-container{
+    width: 10em;
+    font-size: 12px;
+    gap: .15em;
+    }
+
+    .num-container button, .color-container button{
+    width: 4em;
+    padding: 0em;
+    font-size: 10px;
+    }
+
+    .container{
+        max-width: 100em;
+        max-height: 25em;
+    }
+}
